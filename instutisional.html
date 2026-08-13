@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+<head>
+
+ <meta charset="utf-8">
+ <title> minha listas </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+
+ </head>
+<body>
+    <header> class="cabecalho">
+<div id="barra-progresso"></div>
+<h1>titulo principal</h1>
+<p>este e um paragrafo de exemplo.</p>
+<button id="btn-tema" title="Mudar Tema">🌙</button>
+<div class="logo">MeuProjeto</div>
+   
+    <!-- Botão visível apenas no Mobile -->
+    <button id="btn-menu" aria-label="Abrir Menu" aria-expanded="false">
+        ☰
+    </button>
+   
+    <nav id="navegacao" class="menu-escondido">
+        <ul class="lista-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- Bloco de Seção Baseado em Grid -->
+
+<section class="container mt-5 mb-5">
+    <form class="mt-4">
+    <div class="mb-3">
+        <label for="nome" class="form-label fw-bold">Seu Nome:</label>
+        <!-- A classe form-control faz a mágica acontecer -->
+        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo...">
+    </div>
+    
+    <div class="mb-3">
+        <label for="email" class="form-label fw-bold">Seu E-mail:</label>
+        <input type="email" id="email" class="form-control" placeholder="contato@skate.com">
+    </div>
+
+    <!-- Olha a classe btn e btn-success do Bootstrap substituindo o botão antigo -->
+    <button type="submit" class="btn btn-success w-100">Enviar Mensagem</button>
+</form>
+
+ <!-- Linha de Cabeçalho da Seção -->
+<div class="row text-center mb-4">
+
+       <div class="col-12">
+
+          <h2 class="fw-bold">Catálogo de Serviços</h2>
+
+           <p class="text-muted">Implementação estrutural utilizando o sistema de grid do Bootstrap.</p>
+
+       </div>
+   </div>
+
+
+
+   <!-- Linha de Renderização dos Componentes -->
+
+   <div class="row">
+
+       <!-- Ponto de Quebra (Breakpoint): Ocupa 4 colunas em telas médias+ e 12 colunas em telas móveis -->
+
+       <div class="col-md-4 col-12 mb-3">
+
+          <!-- Estrutura do Componente Card -->
+
+<div class="card h-100 shadow-sm border-0">
+
+   <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQa-V2OF76czAJciiOyUGNAYSB9HtRbNrarJng3_I-3nEhf_BIBS6GRw38xIazRe5yUCd97FVCE00Bgt2b5Qin7GXhEwCePnH2h2h6oZ8q67qy6MRiW1z8UZwk" class="card-img-top" alt="Placeholder da imagem de serviço">
+
+   <div class="card-body">
+
+    <h5 class="card-title text-primary">Nomenclatura do Serviço</h5>
+
+       <p class="card-text">Descrição técnica do serviço oferecido. Este componente padroniza automaticamente a tipografia e o espaçamento interno.</p>
+
+   </div>
+
+   <div class="card-footer bg-white border-0 text-center">
+
+       <a href="#" class="btn btn-primary w-100">Consultar Detalhes</a>
+
+   </div>
+
+</div>
+
+       </div>
+
+
+
+       <div class="col-md-4 col-12 mb-3">
+
+           <!-- Estrutura do Componente Card -->
+
+<div class="card h-100 shadow-sm border-0">
+
+   <img src="https://http2.mlstatic.com/D_NQ_NP_920504-MLU76050888606_052024-O.webp" class="card-img-top" alt="Placeholder da imagem de serviço">
+
+   <div class="card-body">
+
+    <h5 class="card-title text-primary">Nomenclatura do Serviço</h5>
+
+       <p class="card-text">Descrição técnica do serviço oferecido. Este componente padroniza automaticamente a tipografia e o espaçamento interno.</p>
+
+   </div>
+
+   <div class="card-footer bg-white border-0 text-center">
+
+       <a href="#" class="btn btn-primary w-100">Consultar Detalhes</a>
+
+   </div>
+
+</div>
+
+       </div>
+
+
+
+       <div class="col-md-4 col-12 mb-3">
+
+      
+
+<!-- Estrutura do Componente Card -->
+
+<div class="card h-100 shadow-sm border-0">
+
+   <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Placeholder da imagem de serviço">
+
+   <div class="card-body">
+
+    <h5 class="card-title text-primary">Nomenclatura do Serviço</h5>
+
+       <p class="card-text">Descrição técnica do serviço oferecido. Este componente padroniza automaticamente a tipografia e o espaçamento interno.</p>
+
+   </div>
+
+   <div class="card-footer bg-white border-0 text-center">
+
+       <a href="#" class="btn btn-primary w-100">Consultar Detalhes</a>
+
+   </div>
+
+</div>
+
+    
+
+       </div>
+
+   </div>
+
+
+<h2>nossa comunidade de skatistas</h2>
+"A vida de um aventureiro skatistas"
+<p>o hub skate e uma comunidade para todos os skatistas, uma comunidade para todos os skatistas</mark>no qual<small>valorizamos>/</small>
+<ol>todo começo e todo <strong>profissional<strong>,venha se juntar a essa comunidade!<br>
+</ol>escrever formulas como H<sub>2</sub>0 ou numero ao quadro como 10<sup>2</sup></p>
+<hr>
+
+<!-- Botão Padrão do Projeto -->
+<button class="btn btn-primary">Assinar Newsletter</button>
+<br>
+
+<!-- Botão Secundário (Apenas com contorno azul) -->
+<button class="btn btn-outline-primary">Saber Mais</button>
+
+
+<!-- Tabela Refatorada com Bootstrap -->
+<div class="table-responsive mt-4 mb-5">
+    <table class="table table-hover table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Equipamento</th>
+                <th scope="col">Nível Indicado</th>
+                <th scope="col">Disponibilidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Shape de Madeira Maple</td>
+                <td>Profissional</td>
+                <td><span class="badge bg-success">Em Estoque</span></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Rolamentos ABEC 7</td>
+                <td>Intermediário</td>
+                <td><span class="badge bg-warning text-dark">Poucas Unidades</span></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Capacete de Proteção</td>
+                <td>Iniciante</td>
+                <td><span class="badge bg-danger">Esgotado</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Lista Refatorada com Bootstrap -->
+<div class="mt-4 mb-5">
+    <h3 class="fw-bold mb-3">Nossas Categorias</h3>
+    <ul class="list-group">
+        <!-- O item com a classe 'active' fica destacado em azul -->
+        <li class="list-group-item active" aria-current="true">Shapes Nacionais</li>
+        <li class="list-group-item">Shapes Importados</li>
+        <li class="list-group-item">Rodinhas e Rolamentos</li>
+        <li class="list-group-item">Vestuário (Camisetas e Bonés)</li>
+        
+        <!-- Item desabilitado -->
+        <li class="list-group-item disabled" aria-disabled="true">Aulas Particulares (Vagas Esgotadas)</li>
+    </ul>
+</div>
+<h3>ranking de mais vendidos</h3>
+<h2>nossas imagens:</h2>
+<img src="C:\Users\alunoucj\Desktop\bela\imagem\camera.jpg">
+<h4>Nosso parceiros</h4>
+<p>segue o link:<a href="https://blacksheep.com.br/">blacksheep</a></p>
+
+<h4>nossas imagens</h4>
+<img src="C:\Users\alunoucj\Desktop\bela\imagem\camera.jpg" class="img-fluid rounded" alt="Skate">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd2ip_YVk8aVErhknuo4EKVDAyUf3Ci8o0xPXrOWyE2ygJY7AR8cLAN_M&s=10s" class="img-fluid rounded" alt="Skate">
+
+
+<form class="mt-4">
+    <div class="mb-3">
+        <label for="nome" class="form-label fw-bold">Seu Nome:</label>
+        <!-- A classe form-control faz a mágica acontecer -->
+        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo...">
+    </div>
+    
+    <div class="mb-3">
+        <label for="email" class="form-label fw-bold">Seu E-mail:</label>
+        <input type="email" id="email" class="form-control" placeholder="contato@skate.com">
+    </div>
+
+    <!-- Olha a classe btn e btn-success do Bootstrap substituindo o botão antigo -->
+    <!-- Botão Secundário (Apenas com contorno azul) -->
+<button class="btn btn-outline-primary">Saber Mais</button>
+</form>
+<br>
+
+<button type="button"  onclick="alert('Ola! bem vindo ao hub skate')">Clique Aqui</button>
+<!-- Fundo Escuro do Modal -->
+<div id="fundo-modal" class="escondido">
+    <!-- A Caixa do Modal em si -->
+    <div class="caixa-modal">
+        <button id="btn-fechar-modal">✖</button>
+        <h2>Fique por dentro!</h2>
+        <p>Assine nossa newsletter para receber as melhores novidades do projeto diretamente no seu e-mail.</p>
+        <!-- Um mini-formulário só de enfeite por enquanto -->
+        <input type="email" placeholder="Digite seu melhor e-mail...">
+        <button class="btn-destaque">Inscrever-se</button>
+ 
+
+<!-- Seção de FAQ (Acordeão) -->
+<section class="container mt-5 mb-5">
+    <h3 class="text-center fw-bold mb-4">Perguntas Frequentes</h3>
+    
+    <div class="accordion" id="faqSkate">
+        
+        <!-- Pergunta 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta1">
+                    Quem pode participar do Hub Skate?
+                </button>
+            </h2>
+            <div id="pergunta1" class="accordion-collapse collapse show" data-bs-parent="#faqSkate">
+                <div class="accordion-body">
+                    Todos! Desde iniciantes que nunca subiram em um shape até profissionais experientes. Nossa comunidade abraça todos os níveis.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta2">
+                    Vocês ensinam manobras?
+                </button>
+            </h2>
+            <div id="pergunta2" class="accordion-collapse collapse" data-bs-parent="#faqSkate">
+                <div class="accordion-body">
+                    Sim! Temos encontros semanais onde skatistas mais experientes ajudam a galera nova a mandar o primeiro Ollie ou Kickflip.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+   <!-- Fundo Escuro do Modal -->
+<div id="fundo-modal" class="escondido">
+    <!-- A Caixa do Modal em si -->
+    <div class="caixa-modal">
+        <button id="btn-fechar-modal">✖</button>
+        <h2>Fique por dentro!</h2>
+        <p>Assine nossa newsletter para receber as melhores novidades do projeto diretamente no seu e-mail.</p>
+        <!-- Um mini-formulário só de enfeite por enquanto -->
+        <input type="email" placeholder="Digite seu melhor e-mail...">
+        <button class="btn-destaque">Inscrever-se</button>
+    </div> </div>
+</div>
+
+<p>fale conosco enviando um <a href="mailto:natalicio.neto@aluno.senai.br">email para contato</a></p>
+
+
+
+<button id="btn-topo" class="escondido">⬆️ Topo</button>
+    <script src="script.js"></script>
+    <!-- JavaScript do Bootstrap (necessário para componentes interativos) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
